@@ -1,0 +1,21 @@
+cantidad_instrucciones = int(input())
+ 
+ram = {}
+ 
+for   in range(cantidad_instrucciones):
+    linea = input().split(" ")
+    
+    if len(linea) ==3:
+        # procesando un load
+         , direccion_memoria, identificador_proceso = linea 
+        if direccion_memoria in ram:
+            # ocupada 
+            print("la posicion de memoria %s ya estaba ocupada con el proceso %s" % (direccion_memoria,ram[direccion_memoria]))
+        else:
+            ram[direccion_memoria] = identificador_proceso
+            print("la carga del proceso %s en la posicion de memoria %s fue exitosa") % (identificador_proceso,direccion_memoria))
+    else:
+        # procesando un unidad 
+         , direccion_memoria = linea
+        if direccion_memoria in ram
+            ram.pop(direccion_memoria)
